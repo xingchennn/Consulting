@@ -1,0 +1,17 @@
+<div class="container">
+
+    <h2>Create Your Available Time Slot</h2>
+
+    <div class="container">
+        <p *ngIf="notActive">You haven't create any appointment yet, create your appointment NOW!</p>
+    </div>
+
+
+    <app-add (addEvent)="addApt($event)"></app-add>
+
+    <app-list [aptList]="theList"
+            (deleteEvent)="deleteApt($event)"></app-list>
+
+
+
+</div>

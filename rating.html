@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    
+    <meta name="Xingchen Liu" content="author name">
+    <meta name="Mengmeng Ye" content="author name">
+        
+    <title>Mentor Detailed Information</title>
+    
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  </head>
+
+  <body>
+    <!--set navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand">Mentor Consulting</a>
+  
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="choose.html">Register</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="login.html">Login</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="list.html">Mentor List</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+      </nav>
+
+    <!--mentor info-->
+    <section class = "detail">
+        <div class = "mentor-photo">
+            <img src="images/mentor1.jpg">
+        </div>
+        <div class= "mentor-info">
+            <h6> Name : Jason</h6>
+            <h6> Education: University of Virginia </h6>
+            <h6> Company: Facebook </h6>
+            <h6> Position: Senior Software Development Engineer </h6>
+            <h6> Rating: 5 </h6>
+            <h6> Reviews: </h6>
+        </div>
+    </section>
+
+    <!--rate-->
+    <section>
+        <div class="consult-time">
+            <h5> Rate your mentor </h5>
+            <span class="fa fa-star" id="star1" onclick="change_color1()"></span>
+            <span class="fa fa-star" id="star2" onclick="change_color2()"></span>
+            <span class="fa fa-star" id="star3" onclick="change_color3()"></span>
+            <span class="fa fa-star" id="star4" onclick="change_color4()"></span>
+            <span class="fa fa-star" id="star5" onclick="change_color5()"></span>
+            <h5> How's your experience with Jason? Write reviews.</h5>
+            <textarea cols="60" rows="10" id="experience"></textarea></br>
+            <button type="button" class="btn btn-primary">Submit</button>
+        </div>
+    </section>
+
+    <!--rate by color the star-->
+    <script>
+      function change_color1() {
+        document.getElementById("star1").setAttribute('style', 'color: red');
+      }
+
+      function change_color2() {
+        document.getElementById("star1").setAttribute('style', 'color: red');
+        document.getElementById("star2").setAttribute('style', 'color: red');
+      }
+
+      function change_color3() {
+        document.getElementById("star1").setAttribute('style', 'color: red');
+        document.getElementById("star2").setAttribute('style', 'color: red');
+        document.getElementById("star3").setAttribute('style', 'color: red');
+      }
+
+      function change_color4() {
+        document.getElementById("star1").setAttribute('style', 'color: red');
+        document.getElementById("star2").setAttribute('style', 'color: red');
+        document.getElementById("star3").setAttribute('style', 'color: red');
+        document.getElementById("star4").setAttribute('style', 'color: red');
+      }
+
+      function change_color5() {
+        document.getElementById("star1").setAttribute('style', 'color: red');
+        document.getElementById("star2").setAttribute('style', 'color: red');
+        document.getElementById("star3").setAttribute('style', 'color: red');
+        document.getElementById("star4").setAttribute('style', 'color: red');
+        document.getElementById("star5").setAttribute('style', 'color: red');
+      }
+
+    </script>
+
+  </body>
+
+</html>

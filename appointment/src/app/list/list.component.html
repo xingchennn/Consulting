@@ -1,0 +1,69 @@
+
+  <div class="container">
+    <div class="card textcenter mt-3"
+    *ngFor="let item of aptList"
+    >
+        <div 
+        [ngStyle]="{'background-color': getColor(item)}"
+        [ngClass]="{'booked': getBookedStatus(item)}"
+        class="apt-addheading card-header"
+        >
+            Existing Appointment
+        </div>
+
+        <div class="card-body">
+            <form action="" id="aptForm">
+
+                <div class="form-group form-row">
+                    <div class="col-md-1">
+                        <label for="">Date: </label>
+                    </div>
+                    <div class="col-md-3">
+                      <p>{{item.date}}</p>
+                    </div><!-- col-md-4 --> 
+
+                    <div class="col-md-1">
+                        <label for="">Starting: </label>
+                    </div>
+                    <div class="col-md-3">
+                      <p>{{item.startTime}}</p>
+                    </div><!-- col-md-4 --> 
+
+                    <div class="col-md-1">
+                        <label for="">Ending: </label>
+                    </div>
+                    <div class="col-md-3">
+                      <p>{{item.endTime}}</p>
+                    </div><!-- col-md-4 --> 
+
+                    <div class="col-md-2">
+                        <label for="">Apt Notes: </label>
+                    </div>
+                    <div class="col-md-10">
+                      <p>{{item.aptNote}}</p>
+                    </div><!-- col-md-4 --> 
+
+                    <div class="col-md-2">
+                        <label for="">Booked By: </label>
+                    </div>
+                    <div class="col-md-10">
+                      <p>{{item.bookedBy}}</p>
+                    </div><!-- col-md-4 --> 
+
+                  </div><!-- form-group -->
+            
+
+    
+                  <div class="form-group form-row mb-0">
+                    <div class="offset-md-2 col-md-10">
+                      <button type="submit" class="btn btn-secondary d-block ml-auto"
+                      (click)="handleDelete(item)"
+                      >Delete Appointment</button>
+                    </div><!-- col-md-offset-2 --> 
+                  </div><!-- form-group -->
+
+
+            </form>
+        </div>        
+    </div>
+</div>

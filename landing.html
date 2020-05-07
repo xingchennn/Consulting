@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    
+    <meta name="Xingchen Liu" content="author name">
+    <meta name="Mengmeng Ye" content="author name">
+
+        
+    <title>Landing page</title>
+    
+    <link rel="stylesheet" href="landing.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    
+  </head>
+
+  <body>
+    <div class = "landing">
+      <h1>Welcome to our Consulting System</h1>
+      <!--  head to list page when click on the button -->
+      <a href="get_list.php" class="btn btn-primary btn-lg" role="button" id="welcome" onmouseover="change_message()" onmouseout="reset_message()">Welcome</a>
+    </div>
+
+    <!-- change welcome words when mouseover the button -->
+    <script>
+  
+      function change_message() {
+        var message = document.getElementById("welcome");
+        message.innerHTML = "Meet all our mentors";
+      }
+
+      function reset_message() {
+        var message = document.getElementById("welcome");
+        message.innerHTML = "Welcome";
+      }
+    </script>
+  </body>
+</html>
+
+  

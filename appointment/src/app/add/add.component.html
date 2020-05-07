@@ -1,0 +1,56 @@
+<p>Add Appointments</p>
+
+<div class="container">
+    <div class="card textcenter mt-3" [ngClass]="{'add-appointment': showForm}">
+        <div class="apt-addheading card-header bg-primary text-white"
+        (click)="toggleAptDisplay()"
+        >
+            Add New Appointment
+        </div>
+
+        <div class="card-body">
+            <form action="" id="aptForm"
+            (ngSubmit)="handleAdd(aptForm.value)"
+            #aptForm="ngForm"
+            >
+
+                <div class="form-group form-row">
+                    <label class="col-md-1 col-form-label text-md-right" for="date">Date</label>
+                    <div class="col-md-3">
+                      <input type="date" class="form-control" id="date" name="date" ngModel>
+                    </div><!-- col-md-4 --> 
+                    <label class="col-md-2 col-form-label text-md-right" for="startTime">Starting Time</label>
+                    <div class="col-md-2">
+                      <input type="time" class="form-control" name="startTime" id="startTime" ngModel>
+                    </div><!-- col-md-4 --> 
+                    <label class="col-md-2 col-form-label text-md-right" for="endTime">Ending Time</label>
+                    <div class="col-md-2">
+                      <input type="time" class="form-control" name="endTime" id="endTime" ngModel>
+                    </div><!-- col-md-4 --> 
+
+                    <input type="hidden"  id="booked" value="null" name="booked" ngModel>
+                    <input type="hidden" id="bookedBy" value="null" name="bookedBy" ngModel>
+
+
+                  </div><!-- form-group -->
+            
+                  <div class="form-group form-row">
+                    <label class="col-md-1 text-md-right" for="aptNote">Apt. Notes</label>
+                    <div class="col-md-11">
+                      <textarea class="form-control" rows="4" cols="50"
+                        name="aptNote" id="aptNote" placeholder="Appointment Notes" ngModel></textarea>
+                    </div><!-- col-md-10 --> 
+                  </div><!-- form-group -->
+            
+                  <div class="form-group form-row mb-0">
+                    <div class="offset-md-2 col-md-10">
+                      <button type="submit" class="btn btn-primary d-block ml-auto"
+                      >Add Appointment</button>
+                    </div><!-- col-md-offset-2 --> 
+                  </div><!-- form-group -->
+
+
+            </form>
+        </div>        
+    </div>
+</div>

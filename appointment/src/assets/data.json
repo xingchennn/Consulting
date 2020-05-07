@@ -1,0 +1,29 @@
+[
+    {
+        "date": "2020-05-11",
+        "startTime": "11:00",
+        "endTime": "12:00",
+        "aptNote": "This is a casual appoinment, please feel free to contact me in advance.",
+        "booked": 1,
+        "bookedBy": "Momo"
+    },
+    {
+        "date": "2020-05-13",
+        "startTime": "11:00",
+        "endTime": "12:00",
+        "aptNote": "This is a casual appoinment, please feel free to contact me in advance.",
+        "booked": 0,
+        "bookedBy": ""
+    },
+    {
+        "date": "2020-05-14",
+        "startTime": "11:00",
+        "endTime": "12:00",
+        "aptNote": "This is a casual appoinment, please feel free to contact me in advance.",
+        "booked": 1,
+        "bookedBy": "Brad"
+    },
+    {
+        
+    }
+]

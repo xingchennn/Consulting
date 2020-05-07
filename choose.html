@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    
+    <meta name="Xingchen Liu" content="author name">
+    <meta name="Mengmeng Ye" content="author name">
+        
+    <title>Who you are</title>
+    
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    
+  </head>
+
+  <body>
+    <!--set navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <a class="navbar-brand">Mentor Consulting</a>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="login.php">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="get_list.php">Mentor List</a>
+            </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!--choose whether you are mentor or mentee-->
+    <div class="title">
+      <h1> Who you are ?</h1>
+    </div>
+
+    <div class="choose-div">
+      <section class="choose my-col-4">
+          <img src="images/mentor1.jpg"><br>
+          <input type="checkbox" id="mentor">
+          <label for="mentor">Mentor</label>
+      </section>
+      <section class="choose my-col-4">
+          <img src="images/mentor1.jpg"><br>
+          <input type="checkbox" id="mentee">
+          <label for="mentee"> Mentee</label>
+      </section>
+    </div>
+
+    <div>
+      <h4 id="alert_msg" class="msg"></h4>
+    </div>
+
+    <div class="next">
+      <button class="btn btn-primary" id="submit" >Next</button>
+    </div>
+
+    <!--check whether the choice is correct and give error message-->
+    <script>
+      document.getElementById("submit").addEventListener("click", function() {
+        var mentor_check = document.getElementById("mentor");
+        var mentee_check = document.getElementById("mentee");
+        var msg = document.getElementById("alert_msg");
+
+        if (mentor_check.checked && mentee_check.checked) {
+          msg.textContent = "You can only choose one!";
+        }
+        else if (mentor_check.checked) {
+          window.location.href = 'mentor_register.php';
+        }
+        else if (mentee_check.checked) {
+          window.location.href = "mentee_register.php";
+        }
+        else {
+          msg.textContent = "You must choose one!";
+        }
+      });
+    </script>
+
+  </body>
+</html>
